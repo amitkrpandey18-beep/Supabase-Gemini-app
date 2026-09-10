@@ -15,7 +15,7 @@ serve(async (req) => {
     const apiKey = Deno.env.get('GEMINI_API_KEY')
 
     if (!apiKey) {
-      throw new Error('GEMINI_API_KEY secret set nahi hai.')
+      throw new Error('GEMINI_API_KEY is not configured in environment secrets.')
     }
 
     // gemini-3.6-flash endpoint
